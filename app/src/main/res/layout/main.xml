@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:background="#000000"
+	android:id="@+id/layout">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:background="#000000">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:text="Vize: %"
+			android:textColor="#FFFFFF"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:inputType="number"
+			android:id="@+id/voran"
+			android:text="30"
+			android:textColor="#FF0000"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:text=" Notu:"
+			android:textColor="#FFFFFF"/>
+
+		<EditText
+			android:inputType="number"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/vnot"
+			android:text="0"
+			android:textColor="#FF0F00"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:background="#000000">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:text="Final: %"
+			android:textColor="#FFFFFF"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:inputType="number"
+			android:id="@+id/foran"
+			android:text="50"
+			android:textColor="#FF0000"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:text=" Notu:"
+			android:textColor="#FFFFFF"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:inputType="number"
+			android:id="@+id/fnot"
+			android:text="0"
+			android:textColor="#FF0000"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:background="#000000">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:text="Ödev: %"
+			android:textColor="#FFFFFF"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:inputType="number"
+			android:id="@+id/ooran"
+			android:text="20"
+			android:textColor="#FF0000"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:text=" Notu:"
+			android:textColor="#FFFFFF"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:inputType="number"
+			android:id="@+id/onot"
+			android:text="0"
+			android:textColor="#FF0000"/>
+
+	</LinearLayout>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="Hesapla"
+		android:onClick="Hesapla"
+		android:textSize="25sp"
+		android:background="#FF0F00"
+		android:textColor="#000000"/>
+
+	<ScrollView
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:text="Bunu yapan: @parduscix"
+			android:id="@+id/sonuc"
+			android:textSize="20sp"
+			android:textColor="#FFFFFF"/>
+
+	</ScrollView>
+
+</LinearLayout>
+
