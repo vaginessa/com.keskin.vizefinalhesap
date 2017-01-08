@@ -5,6 +5,7 @@ import android.os.*;
 import android.view.*;
 import android.widget.*;
 import android.graphics.*;
+import android.content.*;
 
 public class MainActivity extends Activity 
 {
@@ -17,9 +18,15 @@ public class MainActivity extends Activity
 		
 		
     }
+	public void Settings (View view)
+	{
+		
+		Intent settings = new Intent(this,Settings.class);
+		startActivity(settings);
+		
+	}
 	public void Hesapla(View view) {
 		LinearLayout layout = (LinearLayout) findViewById(R.id.layout);
-		
 		//oranlar 
 		EditText voran = (EditText) findViewById(R.id.voran);
 		EditText foran = (EditText) findViewById(R.id.foran);
@@ -139,10 +146,19 @@ public class MainActivity extends Activity
 			}
 			else{
 		//harf sistemi ayarı
-	    harfx=harf;
+				SharedPreferences editor = getSharedPreferences("notsistemi", MODE_PRIVATE); 
+	            int sayi = editor.getInt("sistem",0);
+				if (sayi == 1){
+				harfx=harf;
+				}
+				if (sayi == 2)
+				{
+			    harfx=harf2;
+				}
 		//yazının hazırlanması
 		yazi="Durum: " +harfx + " ile " + durum + ifade + ort;
 		yazi=yazi+"\nŞu anki Halin:"+emoji;
+		if (sayi == 1){
 		if (fn==0){
 			yazi = yazi + "\n\nFinalden:";
 			yazi = yazi + "\n"+ "E  için en az "+((40 - ort)*100  / fo) ;
@@ -168,7 +184,35 @@ public class MainActivity extends Activity
 			yazi = yazi + "\n"+ "A2 için en az "+((80 - ort)*100  / oo) ;
 			yazi = yazi + "\n"+ "A1 için en az "+((90 - ort)*100  / oo) ;
 			
+		}}
+		if (sayi == 2)
+		{
+			if (fn==0){
+				yazi = yazi + "\n\nFinalden:";
+				yazi = yazi + "\n"+ "FD için en az "+((40 - ort)*100  / fo) ;
+				yazi = yazi + "\n"+ "DD için en az "+((50 - ort)*100  / fo) ;
+				yazi = yazi + "\n"+ "DC için en az "+((60 - ort)*100  / fo) ;
+				yazi = yazi + "\n"+ "CC için en az "+((70 - ort)*100  / fo) ;
+				yazi = yazi + "\n"+ "CB için en az "+((75 - ort)*100  / fo) ;
+				yazi = yazi + "\n"+ "BB için en az "+((80 - ort)*100  / fo) ;
+				yazi = yazi + "\n"+ "BA için en az "+((85 - ort)*100  / fo) ;
+				yazi = yazi + "\n"+ "AA için en az "+((90 - ort)*100  / fo) ;
+				
+			}
+			if (on==0 & oo  > 0){
+				yazi = yazi + "\n\nÖdevden:";
+				yazi = yazi + "\n"+ "FD için en az "+((40 - ort)*100  / oo) ;
+				yazi = yazi + "\n"+ "DD için en az "+((50 - ort)*100  / oo) ;
+				yazi = yazi + "\n"+ "DC için en az "+((60 - ort)*100  / oo) ;
+				yazi = yazi + "\n"+ "CC için en az "+((70 - ort)*100  / oo) ;
+				yazi = yazi + "\n"+ "CB için en az "+((75 - ort)*100  / oo) ;
+				yazi = yazi + "\n"+ "BB için en az "+((80 - ort)*100  / oo) ;
+				yazi = yazi + "\n"+ "BA için en az "+((85 - ort)*100  / oo) ;
+				yazi = yazi + "\n"+ "AA için en az "+((90 - ort)*100  / oo) ;
+				
+			}
 		}
+		
 		}
 		sonuc.setText(yazi);
 		}
