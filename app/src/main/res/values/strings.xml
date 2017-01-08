@@ -2,5 +2,6 @@
 <resources>
 
     <string name="app_name">Vize Final Hesaplama</string>
-
+	<string name="app_settings">Ayarlar</string>
+	
 </resources>
