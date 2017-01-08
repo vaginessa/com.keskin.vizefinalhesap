@@ -6,7 +6,8 @@
 	android:orientation="vertical"
 	android:gravity="center"
 	android:background="#000000"
-	android:id="@+id/layout">
+	android:id="@+id/layout"
+	android:onClick="Settings">
 
 	<LinearLayout
 		android:layout_height="wrap_content"
@@ -124,6 +125,16 @@
 			android:textColor="#FF0000"/>
 
 	</LinearLayout>
+
+	<Button
+		style="?android:attr/buttonStyleSmall"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:onClick="Settings"
+		android:text="Ayarlar"
+		android:background="#000000"
+		android:textColor="#FF0000"
+		android:id="@+id/Settings"/>
 
 	<Button
 		android:layout_height="wrap_content"
